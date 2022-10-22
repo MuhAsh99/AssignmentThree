@@ -13,6 +13,7 @@
 		52387C2128FF3B550080AB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52387C1F28FF3B550080AB21 /* Main.storyboard */; };
 		52387C2328FF3B580080AB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52387C2228FF3B580080AB21 /* Assets.xcassets */; };
 		52387C2628FF3B580080AB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52387C2428FF3B580080AB21 /* LaunchScreen.storyboard */; };
+		EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC74DAC2903A9B80085828A /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		52387C2228FF3B580080AB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52387C2528FF3B580080AB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52387C2728FF3B580080AB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC74DAC2903A9B80085828A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				52387C1B28FF3B550080AB21 /* SceneDelegate.swift */,
 				52387C1D28FF3B550080AB21 /* ViewController.swift */,
 				52387C1F28FF3B550080AB21 /* Main.storyboard */,
+				EEC74DAC2903A9B80085828A /* CircularProgressView.swift */,
 				52387C2228FF3B580080AB21 /* Assets.xcassets */,
 				52387C2428FF3B580080AB21 /* LaunchScreen.storyboard */,
 				52387C2728FF3B580080AB21 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				52387C1E28FF3B550080AB21 /* ViewController.swift in Sources */,
 				52387C1A28FF3B550080AB21 /* AppDelegate.swift in Sources */,
+				EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */,
 				52387C1C28FF3B550080AB21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QX675759B5;
+				DEVELOPMENT_TEAM = U92N5AUKTN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentThree/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,7 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QX675759B5;
+				DEVELOPMENT_TEAM = U92N5AUKTN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentThree/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
