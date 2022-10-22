@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMotionUsageDescription</key>
+	<string>Please allow for finding your steps</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +23,7 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSMotionUsageDescription</key>
+    <string>We will be using the health data in order to track your step count.</string>
 </dict>
 </plist>
