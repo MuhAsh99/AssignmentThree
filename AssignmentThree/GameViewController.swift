@@ -12,15 +12,20 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //setting up the game scene
-       // let gameScene = GameScene
-
-        
+        let gameScene = PongGameScene(size: view.bounds.size)
+        let skView = view as! SKView // the view in storyboard must be an SKView
+        skView.showsFPS = true // show some debugging of the FPS
+        skView.showsNodeCount = true // show how many active objects are in the scene
+        skView.ignoresSiblingOrder = true // don't track who entered scene first
+        gameScene.scaleMode = .resizeFill
+        skView.presentScene(gameScene)
+    
     }
-    
 
-    
-   
+
+
+
 
 }
