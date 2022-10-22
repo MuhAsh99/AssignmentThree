@@ -44,6 +44,7 @@ class PongGameScene: SKScene, SKPhysicsContactDelegate {
         
         //SIMON this is from the profs slides but im not sure why it isnt working, maybe you can figure out a way how
        // ballSprite.physicsBody?.restitution = random(min: CGFloat(1.0), max: CGFloat(1.5))
+        
         ballSprite.physicsBody?.isDynamic = true
         // for collision detection we need to setup these masks
         ballSprite.physicsBody?.contactTestBitMask = 0x00000001
@@ -54,6 +55,30 @@ class PongGameScene: SKScene, SKPhysicsContactDelegate {
         
         
     }
+    
+    func addSide(){
+        //func for side walls
+        let leftSide = SKSpriteNode()
+        let rightSide = SKSpriteNode()
+        
+        //only need sides so that ball can bounce off of them
+        leftSide.size = CGSize(width: size.width*0.1, height: size.height)
+        leftSide.position = CGPoint(x: 0, y: size.height*0.5)
+        
+        rightSide.size = CGSize(width: size.width*0.1, height: size.height)
+        rightSide.position = CGPoint(x: size.width*0.5, y: size.height*0.5)
+        
+        for obj in [leftSide,rightSide]{
+                    obj.color = UIColor.white
+                    obj.physicsBody = SKPhysicsBody(rectangleOf:obj.size)
+                    obj.physicsBody?.isDynamic = true
+                    obj.physicsBody?.pinned = true
+                    obj.physicsBody?.allowsRotation = false
+                    self.addChild(obj)
+                }
+        
+    }
+    
     
     
 
