@@ -14,6 +14,7 @@
 		52387C2328FF3B580080AB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52387C2228FF3B580080AB21 /* Assets.xcassets */; };
 		52387C2628FF3B580080AB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52387C2428FF3B580080AB21 /* LaunchScreen.storyboard */; };
 		523E66782903D5B6003ACC08 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E66772903D5B6003ACC08 /* GameViewController.swift */; };
+		523E667A2903D6A7003ACC08 /* PongGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E66792903D6A7003ACC08 /* PongGameScene.swift */; };
 		EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC74DAC2903A9B80085828A /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		52387C2528FF3B580080AB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52387C2728FF3B580080AB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		523E66772903D5B6003ACC08 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		523E66792903D6A7003ACC08 /* PongGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongGameScene.swift; sourceTree = "<group>"; };
 		EEC74DAC2903A9B80085828A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				52387C1D28FF3B550080AB21 /* ViewController.swift */,
 				EEC74DAC2903A9B80085828A /* CircularProgressView.swift */,
 				523E66772903D5B6003ACC08 /* GameViewController.swift */,
+				523E66792903D6A7003ACC08 /* PongGameScene.swift */,
 				52387C1F28FF3B550080AB21 /* Main.storyboard */,
 				52387C2228FF3B580080AB21 /* Assets.xcassets */,
 				52387C2428FF3B580080AB21 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				523E66782903D5B6003ACC08 /* GameViewController.swift in Sources */,
 				52387C1E28FF3B550080AB21 /* ViewController.swift in Sources */,
+				523E667A2903D6A7003ACC08 /* PongGameScene.swift in Sources */,
 				52387C1A28FF3B550080AB21 /* AppDelegate.swift in Sources */,
 				EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */,
 				52387C1C28FF3B550080AB21 /* SceneDelegate.swift in Sources */,
