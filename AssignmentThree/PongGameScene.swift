@@ -29,7 +29,30 @@ class PongGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addBall(){
-        let ballSprite = SKSpriteNode(imageNamed: <#T##String#>)
+        //setting sprite to image in assets file
+        let ballSprite = SKSpriteNode(imageNamed: "bball")
+        
+        ballSprite.size = CGSize(width: size.width*0.1, height: size.height*0.1)
+        
+        //SIMON this is from the profs slides but im not sure why it isnt working, maybe you can figure out a way how
+       // let randNumber = random(min: CGFloat(0.1), max: CGFloat(0.9))
+        
+        //SIMON this is from the profs slides but im not sure why it isnt working, maybe you can figure out a way how
+       // ballSprite.position = CGPoint(x: size.width * randNumber, y: size.height * 0.75)
+                
+        ballSprite.physicsBody = SKPhysicsBody(rectangleOf:ballSprite.size)
+        
+        //SIMON this is from the profs slides but im not sure why it isnt working, maybe you can figure out a way how
+       // ballSprite.physicsBody?.restitution = random(min: CGFloat(1.0), max: CGFloat(1.5))
+        ballSprite.physicsBody?.isDynamic = true
+        // for collision detection we need to setup these masks
+        ballSprite.physicsBody?.contactTestBitMask = 0x00000001
+        ballSprite.physicsBody?.collisionBitMask = 0x00000001
+        ballSprite.physicsBody?.categoryBitMask = 0x00000001
+                
+        self.addChild(ballSprite)
+        
+        
     }
     
     
