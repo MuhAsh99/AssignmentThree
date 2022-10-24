@@ -12,7 +12,6 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //setting up the game scene
         let gameScene = PongGameScene(size: view.bounds.size)
         let skView = view as! SKView // the view in storyboard must be an SKView

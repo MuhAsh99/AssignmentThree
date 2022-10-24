@@ -16,6 +16,8 @@
 		523E66782903D5B6003ACC08 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E66772903D5B6003ACC08 /* GameViewController.swift */; };
 		523E667A2903D6A7003ACC08 /* PongGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E66792903D6A7003ACC08 /* PongGameScene.swift */; };
 		EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC74DAC2903A9B80085828A /* CircularProgressView.swift */; };
+		F414B1A62906887C00AE13AC /* SKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414B1A52906887C00AE13AC /* SKButton.swift */; };
+		F4BD20E02906436E0065071B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD20DF2906436E0065071B /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		523E66772903D5B6003ACC08 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		523E66792903D6A7003ACC08 /* PongGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongGameScene.swift; sourceTree = "<group>"; };
 		EEC74DAC2903A9B80085828A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F414B1A52906887C00AE13AC /* SKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButton.swift; sourceTree = "<group>"; };
+		F4BD20DF2906436E0065071B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				52387C2228FF3B580080AB21 /* Assets.xcassets */,
 				52387C2428FF3B580080AB21 /* LaunchScreen.storyboard */,
 				52387C2728FF3B580080AB21 /* Info.plist */,
+				F4BD20DF2906436E0065071B /* TableViewController.swift */,
+				F414B1A52906887C00AE13AC /* SKButton.swift */,
 			);
 			path = AssignmentThree;
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				523E66782903D5B6003ACC08 /* GameViewController.swift in Sources */,
+				F4BD20E02906436E0065071B /* TableViewController.swift in Sources */,
 				52387C1E28FF3B550080AB21 /* ViewController.swift in Sources */,
+				F414B1A62906887C00AE13AC /* SKButton.swift in Sources */,
 				523E667A2903D6A7003ACC08 /* PongGameScene.swift in Sources */,
 				52387C1A28FF3B550080AB21 /* AppDelegate.swift in Sources */,
 				EEC74DAD2903A9B80085828A /* CircularProgressView.swift in Sources */,
@@ -299,14 +307,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F69WJ27LN4;
+				DEVELOPMENT_TEAM = U6Q67P25V7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentThree/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,14 +335,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F69WJ27LN4;
+				DEVELOPMENT_TEAM = U6Q67P25V7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentThree/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

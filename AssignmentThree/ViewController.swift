@@ -10,6 +10,7 @@
 import UIKit
 import CoreMotion
 
+var availableSteps = 0
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIScrollViewDelegate {
 
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var dailySlider: UISlider!
     @IBOutlet weak var weeklySlider: UISlider!
+    @IBOutlet weak var gameNotify: UILabel!
     
     let defaults = UserDefaults.standard
     
@@ -274,16 +276,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         self.pedoMeter.queryPedometerData(from: endOfYes as Date, to: now as Date){
             (pedData:CMPedometerData?, error: Error?) -> Void in
-            let aggregated_string = "Steps: \(pedData!.numberOfSteps) \n Floors: \(pedData!.floorsAscended!.intValue)"
             
-            DispatchQueue.main.async {
+            DispatchQueue.global().async {
                 self.todaySteps = Int(truncating: pedData!.numberOfSteps)
             }
         }
         
     }
     
-    // Returns the steps from yesterday
+    // Returns the steps from yesterday, check step goal and setup for game
     func queryFromYes(){
         
         let now = Date()
@@ -295,9 +296,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.pedoMeter.queryPedometerData(from: begin! as Date, to: endOfYes as Date){
             (pedData:CMPedometerData?, error: Error?) -> Void in
             
-            DispatchQueue.main.async {
+            DispatchQueue.global().async {
                 self.yesterdaySteps = Int(truncating: pedData!.numberOfSteps)
-            }
+                
+                if (self.yesterdaySteps >= self.dailyGoal) {
+                    metStepGoal = true
+                    self.gameNotify.alpha = 1
+                    availableSteps = self.yesterdaySteps
+                }            }
         }
         
     }
@@ -306,14 +312,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func queryFromPast7(){
         
         let now = Date()
-        let cal = Calendar(identifier: .gregorian)
         let begin = Calendar.current.date(byAdding: .hour, value: -24*7, to: now)
         
         self.pedoMeter.queryPedometerData(from: begin! as Date, to: now as Date){
             (pedData:CMPedometerData?, error: Error?) -> Void in
-            let aggregated_string = "Steps: \(pedData!.numberOfSteps) \n Floors: \(pedData!.floorsAscended!.intValue)"
             
-            DispatchQueue.main.async {
+            DispatchQueue.global().async {
                 self.lastWeekSteps = Int(truncating: pedData!.numberOfSteps)
             }
         }
