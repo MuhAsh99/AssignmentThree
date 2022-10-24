@@ -45,8 +45,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var todaySteps: Int = 0
     var yesterdaySteps: Int = 0
     var lastWeekSteps: Int = 0
-    var dailyGoal: Int = 0
-    var weeklyGoal: Int = 0
+    var dailyGoal: Int = 9999999
+    var weeklyGoal: Int = 9999999
     
     let customQ = OperationQueue()
 
@@ -127,13 +127,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.updateBasedOnPick()
         self.selector.delegate = self
         self.selector.dataSource = self
         setupSliders()
         
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.updateActivity), userInfo: nil, repeats: true)
-        super.viewDidLoad()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateActivity), userInfo: nil, repeats: true)
+        
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.updateLabels), userInfo: nil, repeats: true)
         
@@ -265,6 +266,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @objc
     func updateActivity() {
         self.activityMode.text = "Current Activity: \(currActivity)"
+        if (self.yesterdaySteps >= self.dailyGoal) {
+            metStepGoal = true
+            self.gameNotify.alpha = 1
+            availableSteps = self.yesterdaySteps
+        }
+        else {
+            metStepGoal = false
+            self.gameNotify.alpha = 0
+        }
     }
     
     // Returns the steps taken today
@@ -299,11 +309,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             DispatchQueue.global().async {
                 self.yesterdaySteps = Int(truncating: pedData!.numberOfSteps)
                 
-                if (self.yesterdaySteps >= self.dailyGoal) {
-                    metStepGoal = true
-                    self.gameNotify.alpha = 1
-                    availableSteps = self.yesterdaySteps
-                }            }
+
+                
+            }
         }
         
     }
